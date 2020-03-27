@@ -9,8 +9,10 @@ const weather = function (latitude, longitude, callback) {
         if (error) return callback("Unable to connect to weather service");
 
         if (weather.error) return callback("Unable to find location");
-
-        callback(undefined, `${weather.daily.data[0].summary} Temperature of ${weather.currently.temperature} C, and a ${weather.currently.precipProbability}% of rain`);
+        
+        console.log(weather.daily.data[0])
+        callback(undefined, `${weather.daily.data[0].summary} Temperature of ${weather.currently.temperature} C, and a ${weather.currently.precipProbability}% of rain.
+        We are expecting temperatures of maximum ${weather.daily.data[0].temperatureMax} C, and minimum of ${weather.daily.data[0].temperatureMin} C.`);
     });
 }
 

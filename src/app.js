@@ -51,7 +51,7 @@ console.clear();
     app.get("/about", function (request, response) {
         response.render("about", {
             title: "About",
-            content: "About this app"
+            content: "This application was made by Daniel. It uses information from mapbox.com and darksky.net"
         });
     });
 
