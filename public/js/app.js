@@ -16,7 +16,7 @@ form.addEventListener("submit", function () {
     event.preventDefault();
     loading();
     let place = searchBox.value;
-    let urlWeather = `http://localhost:3000/weather?address=${place}`;
+    let urlWeather = `/weather?address=${place}`;
 
     fetch(urlWeather).then(function (response) {
         response.json().then(function (data) {
@@ -33,7 +33,7 @@ form2.addEventListener("submit", function () {
     event.preventDefault();
     loading();
     let place = searchBox2.value;
-    let urlWeather = `http://localhost:3000/weather?address=${place}`;
+    let urlWeather = `/weather?address=${place}`;
 
     let xhr = new XMLHttpRequest();
 

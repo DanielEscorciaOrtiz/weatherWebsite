@@ -18,7 +18,9 @@ console.clear();
 
     /* --------------- Create server --------------- */
 
-    const app = express();
+    const
+        app = express(),
+        port = process.env.PORT || 3000;
 
 
     /* --------------- Configure server --------------- */
@@ -99,8 +101,8 @@ console.clear();
 
     /* --------------- Get server running --------------- */
 
-    app.listen(3000, function () {
-        console.log("Server is running on port 3000")
+    app.listen(port, function () {
+        console.log(`Server is running on port ${port}`);
     });
 
 
